@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="url(#bg-grad)"/>
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <!-- Fabric rolls / warehouse racks -->
+  <rect x="140" y="140" width="232" height="60" rx="30" fill="#93c5fd"/>
+  <circle cx="170" cy="170" r="16" fill="#1e40af"/>
+  <rect x="110" y="226" width="292" height="60" rx="30" fill="#fbbf24"/>
+  <circle cx="140" cy="256" r="16" fill="#b45309"/>
+  <rect x="80" y="312" width="352" height="60" rx="30" fill="#f8fafc"/>
+  <circle cx="110" cy="342" r="16" fill="#64748b"/>
+</svg>

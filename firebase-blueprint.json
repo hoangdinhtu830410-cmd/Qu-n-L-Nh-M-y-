@@ -1,0 +1,171 @@
+{
+  "entities": {
+    "FabricItem": {
+      "title": "FabricItem",
+      "description": "Lô vải lưu trữ trong kho (kệ, pallet hoặc xe)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tenVai": { "type": "string" },
+        "loVai": { "type": "string" },
+        "mauSac": { "type": "string" },
+        "mauHex": { "type": "string" },
+        "soCuon": { "type": "number" },
+        "trongLuongKg": { "type": "number" },
+        "viTriLoai": { "type": "string", "enum": ["ke", "pallet", "xe"] },
+        "viTriId": { "type": "string" },
+        "viTriTen": { "type": "string" },
+        "ngayNhap": { "type": "string" },
+        "ghiChu": { "type": "string" },
+        "styleNo": { "type": "string" },
+        "retailer": { "type": "string" },
+        "itemNo": { "type": "string" },
+        "rollNo": { "type": "string" },
+        "grossWeightKg": { "type": "number" },
+        "yardage": { "type": "number" },
+        "foc": { "type": "string" },
+        "meas": { "type": "string" },
+        "customerName": { "type": "string" },
+        "containerNo": { "type": "string" },
+        "content": { "type": "string" },
+        "width": { "type": "string" },
+        "weightGsm": { "type": "string" }
+      },
+      "required": ["id", "tenVai", "loVai", "mauSac", "soCuon", "trongLuongKg", "viTriLoai", "viTriId", "viTriTen", "ngayNhap"]
+    },
+    "HangChoItem": {
+      "title": "HangChoItem",
+      "description": "Hàng chờ nhập vào kho",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tenVai": { "type": "string" },
+        "loVai": { "type": "string" },
+        "mauSac": { "type": "string" },
+        "mauHex": { "type": "string" },
+        "soCuon": { "type": "number" },
+        "trongLuongKg": { "type": "number" },
+        "viTriLoai": { "type": "string" },
+        "viTriId": { "type": "string" },
+        "viTriTen": { "type": "string" },
+        "ngayThem": { "type": "string" },
+        "styleNo": { "type": "string" },
+        "retailer": { "type": "string" },
+        "itemNo": { "type": "string" },
+        "rollNo": { "type": "string" },
+        "grossWeightKg": { "type": "number" },
+        "yardage": { "type": "number" },
+        "foc": { "type": "string" },
+        "meas": { "type": "string" },
+        "customerName": { "type": "string" },
+        "containerNo": { "type": "string" },
+        "content": { "type": "string" },
+        "width": { "type": "string" },
+        "weightGsm": { "type": "string" }
+      },
+      "required": ["id", "tenVai", "loVai", "mauSac", "soCuon", "trongLuongKg", "ngayThem"]
+    },
+    "ExportRecord": {
+      "title": "ExportRecord",
+      "description": "Lịch sử xuất kho vải",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fabricId": { "type": "string" },
+        "tenVai": { "type": "string" },
+        "loVai": { "type": "string" },
+        "mauSac": { "type": "string" },
+        "mauHex": { "type": "string" },
+        "soCuonXuat": { "type": "number" },
+        "trongLuongKgXuat": { "type": "number" },
+        "viTriTen": { "type": "string" },
+        "viTriId": { "type": "string" },
+        "viTriLoai": { "type": "string" },
+        "nguoiNhan": { "type": "string" },
+        "ngayXuat": { "type": "string" },
+        "nguoiThucHien": { "type": "string" },
+        "ghiChu": { "type": "string" },
+        "trangThaiXacNhan": { "type": "string", "enum": ["choxacnhan", "danhan", "tuchoi"] },
+        "nguoiXacNhan": { "type": "string" },
+        "ngayXacNhan": { "type": "string" },
+        "boPhanNhan": { "type": "string" },
+        "ghiChuXacNhan": { "type": "string" },
+        "lyDoTuChoi": { "type": "string" }
+      },
+      "required": ["id", "fabricId", "tenVai", "loVai", "mauSac", "soCuonXuat", "trongLuongKgXuat", "viTriTen", "viTriId", "viTriLoai", "nguoiNhan", "ngayXuat", "nguoiThucHien"]
+    },
+    "ReturnRecord": {
+      "title": "ReturnRecord",
+      "description": "Lịch sử nhập trả hàng vải",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fabricId": { "type": "string" },
+        "tenVai": { "type": "string" },
+        "loVai": { "type": "string" },
+        "mauSac": { "type": "string" },
+        "donVi": { "type": "string", "enum": ["cuon", "khoi"] },
+        "soCuonTra": { "type": "number" },
+        "trongLuongKgTra": { "type": "number" },
+        "viTriTen": { "type": "string" },
+        "viTriId": { "type": "string" },
+        "lyDo": { "type": "string" },
+        "nguoiThaoTac": { "type": "string" },
+        "ngayTra": { "type": "string" }
+      },
+      "required": ["id", "tenVai", "loVai", "mauSac", "donVi", "viTriTen", "viTriId", "lyDo", "nguoiThaoTac", "ngayTra"]
+    },
+    "WarehouseConfig": {
+      "title": "WarehouseConfig",
+      "description": "Cấu hình bố cục kho 3D",
+      "type": "object",
+      "properties": {
+        "soKe": { "type": "number" },
+        "soOMoiKe": { "type": "number" },
+        "soPallet": { "type": "number" },
+        "soXe": { "type": "number" },
+        "tangPerXe": { "type": "number" }
+      },
+      "required": ["soKe", "soOMoiKe", "soPallet", "soXe", "tangPerXe"]
+    },
+    "UserAccount": {
+      "title": "UserAccount",
+      "description": "Tài khoản nhân viên đăng nhập",
+      "type": "object",
+      "properties": {
+        "user": { "type": "string" },
+        "pass": { "type": "string" },
+        "vaitro": { "type": "string", "enum": ["admin", "nhanvien", "ketoan"] },
+        "fullName": { "type": "string" },
+        "ngayTao": { "type": "string" }
+      },
+      "required": ["user", "pass", "vaitro"]
+    }
+  },
+  "firestore": {
+    "/fabrics/{fabricId}": {
+      "schema": "FabricItem",
+      "description": "Danh sách tồn kho vải trong kệ, pallet, xe"
+    },
+    "/hangCho/{itemId}": {
+      "schema": "HangChoItem",
+      "description": "Danh sách hàng chờ nhập kho"
+    },
+    "/exports/{exportId}": {
+      "schema": "ExportRecord",
+      "description": "Lịch sử các lần xuất kho"
+    },
+    "/returns/{returnId}": {
+      "schema": "ReturnRecord",
+      "description": "Lịch sử các lần nhập trả vải vào kho"
+    },
+    "/config/{configId}": {
+      "schema": "WarehouseConfig",
+      "description": "Bố cục cấu hình kho và thông số 3D"
+    },
+    "/accounts/{accountId}": {
+      "schema": "UserAccount",
+      "description": "Danh sách tài khoản nội bộ kho"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Quản Lý Kho Vải",
+  "description": "Hệ thống quản lý kho vải: nhập xuất chuyển trả, thiết kế bố cục kho 3D và lưu trữ đồng bộ dữ liệu thời gian thực trên Google Cloud Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

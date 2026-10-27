@@ -1,0 +1,75 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Kho Vải: Quản lý hàng tồn kho, xuất nhập chuyển trả và cấu hình kho
+    match /fabrics/{fabricId} {
+      allow read, write: if true;
+    }
+    match /hangCho/{itemId} {
+      allow read, write: if true;
+    }
+    match /exports/{exportId} {
+      allow read, write: if true;
+    }
+    match /returns/{returnId} {
+      allow read, write: if true;
+    }
+    match /config/{configId} {
+      allow read, write: if true;
+    }
+    match /accounts/{accountId} {
+      allow read, write: if true;
+    }
+    // Phân quyền 3 cấp: Bộ phận, Vị trí làm việc và Nhật ký thao tác
+    match /departments/{deptId} {
+      allow read, write: if true;
+    }
+    match /positions/{posId} {
+      allow read, write: if true;
+    }
+    match /auditLogs/{logId} {
+      allow read, write: if true;
+    }
+    // Phân công giao việc theo vị trí (Task Assignments)
+    match /taskAssignments/{taskId} {
+      allow read, write: if true;
+    }
+    // Lệnh sản xuất & phiếu cắt
+    match /productionOrders/{orderId} {
+      allow read, write: if true;
+    }
+    match /cuttingTickets/{ticketId} {
+      allow read, write: if true;
+    }
+    match /transfers/{transferId} {
+      allow read, write: if true;
+    }
+    match /stageHistory/{docId} {
+      allow read, write: if true;
+    }
+    match /khoThanhPham/{docId} {
+      allow read, write: if true;
+    }
+    match /xuatThanhPham/{docId} {
+      allow read, write: if true;
+    }
+    // Quản lý và khóa sản lượng theo từng cây vải tại các công đoạn (Cắt, May, QC 1, Là, QC 2, Hoàn thành)
+    match /rollProductionOutputs/{docId} {
+      allow read, write: if true;
+    }
+    match /rollAdjustmentLogs/{logId} {
+      allow read, write: if true;
+    }
+    // Connection test document
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+    // Kho Tem Nhãn & Nguyên Phụ Liệu (Trims & Accessories)
+    match /trims/{trimId} {
+      allow read, write: if true;
+    }
+    match /trimTransactions/{txId} {
+      allow read, write: if true;
+    }
+  }
+}
